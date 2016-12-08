@@ -1,0 +1,19 @@
+*~
+/.gradle
+/build
+.java-version
+
+# git
+!.gitkeep
+.git
+
+# intellij idea
+*.iml
+*.ipr
+*.iws
+*.idea
+
+# eclipse
+.classpath
+.project
+.settings
