@@ -2,6 +2,7 @@
 /.gradle
 /build
 .java-version
+.digdag
 
 # git
 !.gitkeep
