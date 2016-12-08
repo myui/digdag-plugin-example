@@ -6,7 +6,7 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 
 group = 'io.digdag.plugin'
-version = '0.1.0'
+version = '0.1.2'
 
 def digdagVersion = '0.8.22'
 
@@ -23,9 +23,9 @@ configurations {
 }
 
 dependencies {
-    compile 'io.digdag:digdag-spi:' + digdagVersion
+    provided 'io.digdag:digdag-spi:' + digdagVersion
     // provided 'io.digdag:digdag-standards:' + digdagVersion
-    compile 'io.digdag:digdag-plugin-utils:' + digdagVersion  // this should be 'compile' once digdag 0.8.2 is released to a built-in repository
+    provided 'io.digdag:digdag-plugin-utils:' + digdagVersion  // this should be 'compile' once digdag 0.8.2 is released to a built-in repository
 }
 sourceSets {
     main {
@@ -38,6 +38,7 @@ sourceSets {
 publishing {
     publications {
         mavenJava(MavenPublication) {
+            // artifactId 'project1-sample'        
             from components.java
         }
     }
