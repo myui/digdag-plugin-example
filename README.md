@@ -49,7 +49,7 @@ git push origin v0.12
 
 https://jitpack.io/#myui/digdag-plugin-example/v0.1.2
 
-Now, you can load the artifact from a github repository as follows:
+Now, you can load the artifact from a github repository in [a dig file](https://github.com/myui/digdag-plugin-example/blob/master/sample/plugin.dig) as follows:
 
 ```
 _export:
