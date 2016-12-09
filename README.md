@@ -4,13 +4,16 @@
 ./gradlew package
 ```
 
+Artifacts are build on local repos: `.build/repo`.
+
+
 You can optionally create Eclipse/Idea project files as follows:
 ```sh
 gradle eclipse
 gradle idea
 ```
 
-Artifacts are build on local repos: `.build/repo`.
+*Note:* _It's better to change the dependencies from `provided` to `compile` in [build.gradle](https://github.com/myui/digdag-plugin-example/blob/master/build.gradle) for creating idea/eclipse project config._
 
 # 2) run an example
 
