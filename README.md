@@ -6,15 +6,6 @@
 
 Artifacts are build on local repos: `.build/repo`.
 
-
-You can optionally create Eclipse/Idea project files as follows:
-```sh
-gradle eclipse
-gradle idea
-```
-
-*Note:* _It's better to change the dependencies from `provided` to `compile` in [build.gradle](https://github.com/myui/digdag-plugin-example/blob/master/build.gradle) for creating idea/eclipse project config._
-
 # 2) run an example
 
 ```sh
@@ -28,6 +19,17 @@ You'll find the result of the task in `./sample/example.out`.
 ---
 
 # Writing your own plugin
+
+0. Create Eclipse/Idea project files for development
+
+You can optionally create Eclipse/Idea project files as follows:
+```sh
+gradle eclipse
+gradle idea
+```
+
+*Note:* _It's better to change the dependencies from `provided` to `compile` in [build.gradle](https://github.com/myui/digdag-plugin-example/blob/master/build.gradle) for creating idea/eclipse project config._
+
 
 1. You need to implement [a Plugin class](https://github.com/myui/digdag-plugin-example/blob/master/src/main/java/io/digdag/plugin/example/ExamplePlugin.java) that implements `io.digdag.spi.Plugin`.
 
