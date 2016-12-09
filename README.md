@@ -4,7 +4,7 @@
 ./gradlew package
 ```
 
-Artifacts are build on local repos: `.build/repo`.
+Artifacts are build on local repos: `./build/repo`.
 
 # 2) run an example
 
