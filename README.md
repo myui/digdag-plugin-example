@@ -1,7 +1,10 @@
+# digdag-plugin-example
+[![Jitpack](https://jitpack.io/v/myui/digdag-plugin-example.svg)](https://jitpack.io/#myui/digdag-plugin-example) [![Digdag](https://img.shields.io/badge/digdag-v0.9.12-brightgreen.svg)](https://github.com/treasure-data/digdag/releases/tag/v0.9.12)
+
 # 1) build
 
 ```sh
-./gradlew package
+./gradlew publish
 ```
 
 Artifacts are build on local repos: `./build/repo`.
@@ -43,11 +46,11 @@ You can use a local Maven repository (local FS, Amazon S3) or any public Maven r
 [Jitpack](https://jitpack.io/) is useful for publishing your github repository as a maven repository.
 
 ```sh
-git tag v0.12
-git push origin v0.12
+git tag v0.13
+git push origin v0.13
 ```
 
-https://jitpack.io/#myui/digdag-plugin-example/v0.1.2
+https://jitpack.io/#myui/digdag-plugin-example/v0.1.3
 
 Now, you can load the artifact from a github repository in [a dig file](https://github.com/myui/digdag-plugin-example/blob/master/sample/plugin.dig) as follows:
 
@@ -58,8 +61,8 @@ _export:
       # - file://${repos}
       - https://jitpack.io
     dependencies:
-      # - io.digdag.plugin:digdag-plugin-example:0.1.2
-      - com.github.myui:digdag-plugin-example:v0.1.2
+      # - io.digdag.plugin:digdag-plugin-example:0.1.3
+      - com.github.myui:digdag-plugin-example:v0.1.3
 ```
 
 # Further reading

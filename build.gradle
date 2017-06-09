@@ -6,9 +6,9 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 
 group = 'io.digdag.plugin'
-version = '0.1.2'
+version = '0.1.3'
 
-def digdagVersion = '0.8.22'
+def digdagVersion = '0.9.12'
 
 repositories {
     mavenCentral()
@@ -27,6 +27,7 @@ dependencies {
     // provided 'io.digdag:digdag-standards:' + digdagVersion
     provided 'io.digdag:digdag-plugin-utils:' + digdagVersion  // this should be 'compile' once digdag 0.8.2 is released to a built-in repository
 }
+
 sourceSets {
     main {
         compileClasspath += configurations.provided

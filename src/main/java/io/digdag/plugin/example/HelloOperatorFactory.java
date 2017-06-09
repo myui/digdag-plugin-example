@@ -2,14 +2,11 @@ package io.digdag.plugin.example;
 
 import io.digdag.client.config.Config;
 import io.digdag.spi.Operator;
+import io.digdag.spi.OperatorContext;
 import io.digdag.spi.OperatorFactory;
-import io.digdag.spi.TaskExecutionContext;
-import io.digdag.spi.TaskRequest;
 import io.digdag.spi.TaskResult;
 import io.digdag.spi.TemplateEngine;
 import io.digdag.util.BaseOperator;
-
-import java.nio.file.Path;
 
 public class HelloOperatorFactory implements OperatorFactory {
     @SuppressWarnings("unused")
@@ -25,18 +22,18 @@ public class HelloOperatorFactory implements OperatorFactory {
     }
 
     @Override
-    public Operator newOperator(Path projectPath, TaskRequest request) {
-        return new HelloOperator(projectPath, request);
+    public Operator newOperator(OperatorContext context) {
+        return new HelloOperator(context);
     }
 
     private class HelloOperator extends BaseOperator {
 
-        HelloOperator(Path projectPath, TaskRequest request) {
-            super(projectPath, request);
+        HelloOperator(OperatorContext context) {
+            super(context);
         }
 
         @Override
-        public TaskResult runTask(TaskExecutionContext ctx) {
+        public TaskResult runTask() {
             //Config params = request.getConfig();
             Config params = request.getConfig().mergeDefault(
                 request.getConfig().getNestedOrGetEmpty("hello"));
