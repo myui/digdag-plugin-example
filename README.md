@@ -46,8 +46,8 @@ You can use a local Maven repository (local FS, Amazon S3) or any public Maven r
 [Jitpack](https://jitpack.io/) is useful for publishing your github repository as a maven repository.
 
 ```sh
-git tag v0.13
-git push origin v0.13
+git tag v0.1.3
+git push origin v0.1.3
 ```
 
 https://jitpack.io/#myui/digdag-plugin-example/v0.1.3
