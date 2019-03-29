@@ -36,6 +36,12 @@ sourceSets {
     }
 }
 
+eclipse {
+    classpath {
+        plusConfigurations += [ configurations.provided ]
+    }
+}
+
 publishing {
     publications {
         mavenJava(MavenPublication) {
